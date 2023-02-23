@@ -1,0 +1,12 @@
+#cache
+__pycache__
+.idea
+
+#generated files
+DVFS_*
+DIST_*
+Modele_2Pstates.pdf
+Modele_3Pstates.pdf
+Modele_4Pstates.pdf
+resources
+*.txt
