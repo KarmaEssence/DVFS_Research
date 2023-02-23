@@ -30,13 +30,14 @@ Tree of the most important files and folder in the project's repository hierarch
 │ └──single/: To store all single results.
 ├─┬─src/: Source folder.
 │ ├─┬─algorithms/: Algorithms folder.
-│ │ ├─┬─wsm/: Weighted sum method.
+│ │ ├─┬─wsm/: Weighted sum methods.
 │ │ │ ├──exhaustive.py: Exhaustive search.
-│ │ │ ├──greedy.py: Greedy search.
+│ │ │ ├──greedy.py: Greedy proposed method.
 │ │ │ ├──local.py: Local search.
 │ │ │ └──tabu.py: Tabu search. 
-│ │ └─┬─pareto/: Pareto method.
-│ │   └──kung.py: kung search.
+│ │ └─┬─pareto/: Pareto methods.
+│ │   ├──kung.py: Kung front method.
+│ │   └──approx_kung.py: Approx greedy Pareto method.
 │ ├─┬─others/: Other methods.
 │ │ ├──save_data_in_file.py: To save results in resources file.
 │ │ └──utils.py: Utils functions.
@@ -56,5 +57,7 @@ Tree of the most important files and folder in the project's repository hierarch
 
 ## Copyright
 
-Some features of this project uses content of other user and each one is sourced. 
+This code is open source. However, one can cite the original document submitted to ECMS 2023 : 
+"STOCHASTIC MODELING AND OPTIMIZATION FOR POWER AND PERFORMANCE CONTROL IN DVFS SYSTEMS", 
+Youssef AIT EL MAHJOUB, Leo LE CORRE and Hind CASTEL-TALEB.
 
