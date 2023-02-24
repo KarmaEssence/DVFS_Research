@@ -57,7 +57,7 @@ In this project, there are three type of tests you can run :
 
 Allows to generate a graph to compare the efficiency of all weight sum and pareto methods.
 To use this test, you need to uncomment the function `cu.launch()` in `launcher.py`, after that, you can go to `curves.py`
-to uncomment the actual function to use it, moreover you can add or remove your own test in this file.
+to uncomment the actual function to use, moreover you can add or remove your own test in this file.
 
 <br>
 <div align="center">
@@ -114,7 +114,7 @@ For example, here is the result of the exhaustive search :
 
 Allows to generate a latex file to compare the efficiency of all wsm and pareto method.
 To use this test, you need to uncomment the function `la.launch()` in `launcher.py`, after that, you can go to `latex.py`
-to uncomment the actual function to use it, moreover you can add or remove
+to uncomment the actual function to use, moreover you can add or remove
 your own test in this file.
 
 <br>
@@ -154,7 +154,7 @@ In this section all screenshots related to the test are displayed here.
     <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_4.png" width="300" height="250"/>
 </div>    
 
-### B) Latex
+### B) Latex (example of a small instance)
 
 <div align="center">
     <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_1.png" width="600" height="140"/>
