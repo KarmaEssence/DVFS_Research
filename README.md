@@ -141,6 +141,8 @@ your latex editor like overleaf :
 </div>
 <br>
 
+This test may take a little longer as it compares all methods for all proposed instances.
+
 ## V - Illustration
 
 In this section all screenshots related to the test are displayed here.
