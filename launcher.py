@@ -14,7 +14,7 @@ def main():
     mconst.create_folder_if_he_doesnt_exist(mconst.resource)
     # cu.launch() # Test 1 : Curves
     # si.launch() # Test 2 : Single
-    # la.launch() # Test 3 : Latex : this test can take a bit longer because it compares all the methods for all the proposed instances.
+    # la.launch() # Test 3 : Latex : This test may take a little longer as it compares all methods for all proposed instances.
     print("All test done !")
 
 
