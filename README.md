@@ -168,4 +168,4 @@ In this section all screenshots related to the test are displayed here.
 
 ## Copyright
 
-This code is open source. However, one can cite the original document submitted to ECMS 2023 : "STOCHASTIC MODELING AND OPTIMIZATION FOR POWER AND PERFORMANCE CONTROL IN DVFS SYSTEMS", Youssef AIT EL MAHJOUB, Leo LE CORRE and Hind CASTEL-TALEB."
+This Framework is open source. However, one can cite the original document submitted to ECMS 2023 : "STOCHASTIC MODELING AND OPTIMIZATION FOR POWER AND PERFORMANCE CONTROL IN DVFS SYSTEMS", Youssef AIT EL MAHJOUB, Leo LE CORRE and Hind CASTEL-TALEB."
