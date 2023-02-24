@@ -1,10 +1,41 @@
 # DVFS-Research
 
 ## Goal
+ 
+This framework addresses the problem of performance-energy trade-off in DVFS (Dynamic Voltage Frequency Scaling) systems. Today processor, Virtual Machine and Servers activity bring environmental question, more accurately some services doesn't need a high capacity of ressources. DVFS technique allows a system to remain switched ON while changing frequency to match the traffic. This avoids successive shutdown and restoration costs of big systems that can result in waste additional power and further latency to restore the same regime. The proposed DVFS model consideres a vector of thresholds that controls switch UP or DOWN of the frequency of the system. Thus, we seek to find the optimal vector of thresholds for performance and power consumption control. The system is modeled by a birth-death process that we propose, solved analytically and efficiently. Then we start a Multi-Objective Optimization to find the optimal thresholds. The optimization process considers a scalarization approach (WSM - Weighted Sum Method) and a non-dominated set approach (Pareto method). For more details, refer to the original paper [1].
 
-Today processor activity bring environmental question, more accurately some services doesn't need a high capacity of
-this one. For that we introduce the idea of "Dynamic voltage and frequency scaling" which allow converting power in 
-function of energy of CPU.
+## Project architecture
+
+Tree of the most important files and folder in the project's repository :
+
+```
+/
+├─┬─resources/: To store all generated results.
+│ ├──curves/: To store all curves.
+│ ├──latex/: To store all latex content.
+│ └──single/: To store all single results.
+├───screenshots/: All screenshots used in README.md.
+├─┬─src/: Source folder.
+│ ├─┬─algorithms/: Algorithms folder.
+│ │ ├─┬─wsm/: Weighted sum methods.
+│ │ │ ├──exhaustive.py: Exhaustive search.
+│ │ │ ├──greedy.py: Greedy proposed method.
+│ │ │ ├──local.py: Local search.
+│ │ │ └──tabu.py: Tabu search. 
+│ │ └─┬─pareto/: Pareto methods.
+│ │   ├──kung.py: Kung front method.
+│ │   └──approx_kung.py: Approx greedy Pareto method.
+│ ├─┬─others/: Other methods.
+│ │ ├──save_data_in_file.py: To save results in resources file.
+│ │ └──utils.py: Utils functions.
+│ └─┬─tests/: Tests folder.
+│   ├──curves.py: To generates curves.
+│   ├──latex.py: To generates latex content.
+│   └──single.py: Test of each componant of projet.
+├───.gitignore: To avoid junk files on git repository. 
+├───README.md: This file.
+└───launcher.py: To run all content from src/.
+```
 
 ## Build and run
 
@@ -20,9 +51,9 @@ Uncomment and run function from launcher.py :
 
 ## Usage
 
-In this project, you are three type of tests you can run :
+In this project, there are three type of tests you can run :
 
-### Curves
+### A) Test 1 : Curves
 
 Allows to generate a graph to compare the efficiency of all weight sum and pareto methods.
 To use this test, you need to uncomment the function `cu.launch()` in `launcher.py`, after that, you can go to `curves.py`
@@ -53,7 +84,7 @@ For example, here is the result of the test 1 :
 </div>
 <br>
 
-### Single
+### B) Test 2 : Single
 
 Allows to shows all algorithms already implemented in action.
 To use this test, you need to uncomment the function `si.launch()` in `launcher.py`, after that, you can go to `single.py` 
@@ -79,7 +110,7 @@ For example, here is the result of the exhaustive search :
 </div>
 <br>
 
-### Latex
+### C) Test 3 : Latex
 
 Allows to generate a latex file to compare the efficiency of all wsm and pareto method.
 To use this test, you need to uncomment the function `la.launch()` in `launcher.py`, after that, you can go to `latex.py`
@@ -114,7 +145,7 @@ your latex editor like overleaf :
 
 In this section all screenshots related to the test are displayed here.
 
-### Curves 
+### A) Curves 
 
 <div align="center">
     <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_1.png" width="300" height="250"/>
@@ -123,7 +154,7 @@ In this section all screenshots related to the test are displayed here.
     <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_4.png" width="300" height="250"/>
 </div>    
 
-### Latex
+### B) Latex
 
 <div align="center">
     <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_1.png" width="600" height="140"/>
@@ -133,38 +164,7 @@ In this section all screenshots related to the test are displayed here.
 
 </div>
 
-## Architecture
 
-Tree of the most important files and folder in the project's repository hierarchy :
-
-```
-/
-├─┬─resources/: To store all generated results.
-│ ├──curves/: To store all curves.
-│ ├──latex/: To store all latex content.
-│ └──single/: To store all single results.
-├───screenshots/: All screenshots used in README.md.
-├─┬─src/: Source folder.
-│ ├─┬─algorithms/: Algorithms folder.
-│ │ ├─┬─wsm/: Weighted sum methods.
-│ │ │ ├──exhaustive.py: Exhaustive search.
-│ │ │ ├──greedy.py: Greedy proposed method.
-│ │ │ ├──local.py: Local search.
-│ │ │ └──tabu.py: Tabu search. 
-│ │ └─┬─pareto/: Pareto methods.
-│ │   ├──kung.py: Kung front method.
-│ │   └──approx_kung.py: Approx greedy Pareto method.
-│ ├─┬─others/: Other methods.
-│ │ ├──save_data_in_file.py: To save results in resources file.
-│ │ └──utils.py: Utils functions.
-│ └─┬─tests/: Tests folder.
-│   ├──curves.py: To generates curves.
-│   ├──latex.py: To generates latex content.
-│   └──single.py: Test of each componant of projet.
-├───.gitignore: To avoid junk files on git repository. 
-├───README.md: This file.
-└───launcher.py: To run all content from src/.
-```
 
 ##  Contributors
 
@@ -173,4 +173,6 @@ Tree of the most important files and folder in the project's repository hierarch
 
 ## Copyright
 
-This code is open source. However, one can cite the original document submitted to ECMS 2023 : "STOCHASTIC MODELING AND OPTIMIZATION FOR POWER AND PERFORMANCE CONTROL IN DVFS SYSTEMS", Youssef AIT EL MAHJOUB, Leo LE CORRE and Hind CASTEL-TALEB."
+This code is open source. However, one can cite the original document [1] submitted to ECMS 2023.
+
+[1] "STOCHASTIC MODELING AND OPTIMIZATION FOR POWER AND PERFORMANCE CONTROL IN DVFS SYSTEMS", Youssef AIT EL MAHJOUB, Leo LE CORRE and Hind CASTEL-TALEB". The paper was submitted to "MaSpec" track of 37th ECMS - International Conference on Modelling and Simulation, 2023.
