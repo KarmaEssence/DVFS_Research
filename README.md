@@ -18,6 +18,7 @@ Uncomment and run function from launcher.py :
 
     python launcher.py
 
+
 ## Architecture
 
 Tree of the most important files and folder in the project's repository hierarchy :
@@ -51,11 +52,12 @@ Tree of the most important files and folder in the project's repository hierarch
 └───launcher.py: To run all content from src/.
 ```
 
+
 ## Usage
 
-In this project, there are three types of tests you can run :
+In this project, there are three types of tests you can run:
 
-### Test1: Curves
+### Test 1: Curves
 
 Allows to generate a graph to compare the efficiency of all weight sum and pareto methods.
 To use this test, you need to uncomment the function `cu.launch()` in `launcher.py`, after that, you can go to `curves.py`
@@ -63,7 +65,7 @@ to uncomment the actual function to use it, moreover you can add or remove your 
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_uncomment_in_launcher.png" width="400" height="150"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_uncomment_in_launcher.png" width="400" height="150"/>
 </div>
 <br>
 
@@ -73,7 +75,7 @@ curves with the same scale and the position where the points should be selected.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_uncomment_in_test_1.png" width="400" height="250"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_uncomment_in_test_1.png" width="400" height="250"/>
 </div>
 <br>
 
@@ -82,11 +84,11 @@ For example, here is the result of the test 1 :
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_test_1_results.png" width="500" height="200"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_test_1_results.png" width="500" height="200"/>
 </div>
 <br>
 
-### Test2: Single
+### Test 2: Single
 
 Allows to shows all algorithms already implemented in action.
 To use this test, you need to uncomment the function `si.launch()` in `launcher.py`, after that, you can go to `single.py` 
@@ -95,7 +97,7 @@ your own test in this file.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/single_uncomment_in_launcher.png" width="400" height="150"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/single_uncomment_in_launcher.png" width="400" height="150"/>
 </div>
 <br>
 
@@ -104,12 +106,12 @@ For example, here is the result of the exhaustive search :
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/single_exhaustive_results_1.png" width="500" height="125"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/single_exhaustive_results_2.png" width="500" height="25"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/single_exhaustive_results_1.png" width="500" height="125"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/single_exhaustive_results_2.png" width="500" height="25"/>
 </div>
 <br>
 
-### Test3: Latex
+### Test 3: Latex
 
 Allows to generate a latex file to compare the efficiency of all wsm and pareto method.
 To use this test, you need to uncomment the function `la.launch()` in `launcher.py`, after that, you can go to `latex.py`
@@ -118,7 +120,7 @@ your own test in this file.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_uncomment_in_launcher.png" width="400" height="150"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_uncomment_in_launcher.png" width="400" height="150"/>
 </div>
 <br>
 
@@ -132,8 +134,8 @@ your latex editor like overleaf :
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_test_1_results_1.png" width="500" height="20"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_test_1_results_2.png" width="1000" height="350"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_test_1_results_1.png" width="500" height="20"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_test_1_results_2.png" width="1000" height="350"/>
 </div>
 <br>
 
@@ -141,22 +143,22 @@ your latex editor like overleaf :
 
 In this section all screenshots related to the test are displayed here.
 
-### Curves 
+### a) Curves 
 
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_example_1.png" width="300" height="250"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_example_2.png" width="300" height="250"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_example_3.png" width="300" height="250"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_example_4.png" width="300" height="250"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_1.png" width="300" height="250"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_2.png" width="300" height="250"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_3.png" width="300" height="250"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_4.png" width="300" height="250"/>
 </div>    
 
-### Latex
+### b) Latex (example of a small instance)
 
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_example_1.png" width="600" height="140"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_example_2.png" width="600" height="70"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_example_3.png" width="600" height="120"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/latex_example_4.png" width="600" height="50"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_1.png" width="600" height="140"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_2.png" width="600" height="70"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_3.png" width="600" height="120"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_4.png" width="600" height="50"/>
 
 </div>
 
