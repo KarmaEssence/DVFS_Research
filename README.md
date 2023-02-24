@@ -86,9 +86,9 @@ For example, here is the result of the test 1 :
 
 ### B) Test 2 : Single
 
-Allows to shows all algorithms already implemented in action.
+Allows to show all algorithms already implemented in action.
 To use this test, you need to uncomment the function `si.launch()` in `launcher.py`, after that, you can go to `single.py` 
-to uncomment the actual function to use it, moreover you can add or remove
+to uncomment the actual function to use, moreover you can add or remove
 your own test in this file.
 
 <br>
