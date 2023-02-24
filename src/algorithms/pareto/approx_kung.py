@@ -8,11 +8,11 @@ import src.method_const as mconst
 def search_approx_kung(Lambda, pstates):  # Methode2 : "Approx + Fast" Pareto Optimal, for any Pstates
     """
     The function `search_approx_kungs` takes as input a list of `pstates` and a `Lambda` and returns the
-    Pareto optimal solutions for the given `pstates` and `Lambda`
+    Pareto optimal solutions for the given `pstates` and `Lambda`.
 
-    @param Lambda the arrival rate of the jobs
-    @param pstates a list of pstates, e.g. [1,2,3,4,5,6]
-    @return the Pareto optimal solutions and the time taken to compute them.
+    @param Lambda The arrival rate of the jobs.
+    @param pstates A list of pstates, e.g. [1,2,3,4,5,6].
+    @return The Pareto optimal solutions and the time taken to compute them.
     """
 
     n = len(pstates)

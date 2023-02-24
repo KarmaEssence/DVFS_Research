@@ -2,14 +2,14 @@ import src.method_const as mconst
 
 def displaying_results(method_name, thresholds, value, time, Delta=None, th_opt=None):
     """
-    It prints the results of the optimization
+    It prints the results of the optimization.
 
-    @param method_name the name of the method used to solve the problem
-    @param thresholds the thresholds used to generate the sample
-    @param value the value of the objective function
-    @param time the time it took to run the algorithm
-    @param Delta the difference between the optimal value and the value of the solution found by the algorithm
-    @param th_opt the starting thresholds for the optimization
+    @param method_name The name of the method used to solve the problem.
+    @param thresholds The thresholds used to generate the sample.
+    @param value The value of the objective function.
+    @param time The time it took to run the algorithm.
+    @param Delta The difference between the optimal value and the value of the solution found by the algorithm.
+    @param th_opt The starting thresholds for the optimization.
     """
     print("Method name: {}".format(method_name))
     print("Thresholds: {}".format(thresholds))
@@ -22,14 +22,14 @@ def displaying_results(method_name, thresholds, value, time, Delta=None, th_opt=
 
 def exhaustive(Lambda, Alpha, pstates):
     """
-    It takes in the parameters of the problem, and returns the optimal thresholds, the optimal value, and the time it
-    took to compute the optimal thresholds
+    It takes in the parameters of the problem, and returns the optimal thresholds, the optimal value,
+    and the time it took to compute the optimal thresholds.
 
-    @param Lambda the arrival rate of the Poisson process
-    @param Alpha the number of states in the system
-    @param pstates a list of the possible states of the system.
+    @param Lambda The rate of arrival task.
+    @param Alpha The weight of the response time objectif.
+    @param pstates A list of the power state.
 
-    @return the name of the method, the thresholds, the value, and the time.
+    @return The name of the method, the thresholds, the value, and the time.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.single_exhaustive)
     method_name = "exhaustive"
@@ -41,14 +41,14 @@ def exhaustive(Lambda, Alpha, pstates):
 
 def greedy(Lambda, Alpha, pstates, Delta):
     """
-    It takes in the parameters of the problem and returns the thresholds, value, time, and Delta
+    It takes in the parameters of the problem and returns the thresholds, value, time, and Delta.
 
-    @param Lambda the arrival rate of the Poisson process
-    @param Alpha The number of arms
-    @param pstates the number of states in the MDP
-    @param Delta the number of time steps to look ahead
+    @param Lambda The rate of arrival task.
+    @param Alpha The weight of the response time objective.
+    @param pstates A list of the power state.
+    @param Delta The size of the neighborhood.
 
-    @return the name of the method, the thresholds, the value, the time, and the Delta.
+    @return The name of the method, the thresholds, the value, the time, and the Delta.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.single_greedy)
     method_name = "greedy"
@@ -63,12 +63,12 @@ def local(Lambda, Alpha, pstates, th_opt=None):
     It takes in the parameters of the problem, and returns the optimal thresholds and the value of the objective
     function
 
-    @param Lambda the arrival rate of the Poisson process
-    @param Alpha the number of servers
-    @param pstates the number of states in the system
-    @param th_opt the optimal threshold for the given parameters. If not given, it will be calculated.
+    @param Lambda The rate of arrival task.
+    @param Alpha The weight of the response time objective.
+    @param pstates A list of the power state.
+    @param th_opt The optimal threshold for the given parameters. If not given, it will be calculated.
 
-    @return the name of the method, the thresholds, the value, the time, and the optimal threshold.
+    @return The name of the method, the thresholds, the value, the time, and the optimal threshold.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.single_local)
     method_name = "local"
@@ -82,12 +82,12 @@ def tabu(Lambda, Alpha, pstates, th_opt=None):
     """
     It takes in the parameters of the problem, and returns the results of the tabu search algorithm
 
-    @param Lambda the number of states in the system
-    @param Alpha the number of states in the system
-    @param pstates the number of states in the Markov chain
-    @param th_opt the optimal threshold value. If not provided, it will be calculated.
+    @param Lambda The rate of arrival task.
+    @param Alpha The weight of the response time objective.
+    @param pstates A list of the power state.
+    @param th_opt The optimal threshold value. If not provided, it will be calculated.
 
-    @return the name of the method, the thresholds, the value, the time, and the optimal threshold.
+    @return The name of the method, the thresholds, the value, the time, and the optimal threshold.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.single_tabu)
     method_name = "tabu"
@@ -99,10 +99,10 @@ def tabu(Lambda, Alpha, pstates, th_opt=None):
 
 def kung(Lambda, pstates):
     """
-    It takes a list of states and a list of objectives, and returns a list of states that are pareto optimal
+    It takes a list of states and a list of objectives, and returns a list of states that are pareto optimal.
 
-    @param Lambda the number of points to be generated
-    @param pstates the number of states in the problem
+    @param Lambda The rate of arrival task.
+    @param pstates A list of the power state.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.singe_kung)
     method_name = "kung"
@@ -112,10 +112,10 @@ def kung(Lambda, pstates):
 
 def approx_kung(Lambda, pstates):
     """
-    It takes a Lambda and a list of pstates, and then it saves the results of the approx_kung method to a csv file
+    It takes a Lambda and a list of pstates, and then it saves the results of the approx_kung method to a csv file.
 
-    @param Lambda the number of states in the system
-    @param pstates the number of states in the system
+    @param Lambda The rate of arrival task.
+    @param pstates A list of the power state.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.single_approx_kung)
     method_name = "approx_kung"

@@ -1,6 +1,7 @@
-# All constants are defined here
+# External modules
 import decimal
 
+# All constants are defined here
 import src.const as const
 
 # All search methods are defined here
@@ -44,9 +45,6 @@ min_vector_local = []
 
 # Store all tabu search's minimal vector found.
 min_vector_tabu = []
-
-'''# Results of space domain function for approx kung method.
-space_domain_approx = [[], 1e5]'''
 
 # Arguments used for wsm methods in latex array
 file_top_field = "Method name = {}\nDelta = {}\nAlpha = {}\nPstates = {}\nC = {}\nB = {}\nType= {}\n" \

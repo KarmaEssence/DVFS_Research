@@ -7,12 +7,12 @@ import src.method_const as mconst
 
 def define_neighbor(th_opt, Delta):
     """
-    It returns the range of possible values for the next threshold
+    It returns the range of possible values for the next threshold.
 
-    @param th_opt the current optimal threshold
-    @param Delta the maximum distance between two consecutive thresholds
+    @param th_opt The current optimal threshold.
+    @param Delta The maximum distance between two consecutive thresholds.
 
-    @return the start and end of the neighbor set.
+    @return The start and end of the neighbor set.
     """
     neighbor_start = th_opt[-1] - Delta
     neighbor_end = th_opt[-1] + Delta + 1
@@ -31,15 +31,15 @@ def define_neighbor(th_opt, Delta):
 
 def exhaustive_search_2pstates(Lambda, Alpha, pstates, time_response_min, time_response_max, power_min, power_max):
     """
-    It finds the optimal threshold for the first two p-states
+    It finds the optimal threshold for the first two p-states.
 
-    @param Lambda the arrival rate of the jobs
+    @param Lambda The arrival rate of the jobs.
     @param Alpha The weight of the response time in the objective function.
-    @param pstates list of pstates
-    @param time_response_min minimum time response
-    @param time_response_max the maximum time response of the system
-    @param power_min Minimum power consumption of the system
-    @param power_max Maximum power consumption of the system
+    @param pstates List of pstates.
+    @param time_response_min Minimum time response.
+    @param time_response_max The maximum time response of the system.
+    @param power_min Minimum Power consumption of the system.
+    @param power_max Maximum Power consumption of the system.
 
     @return The optimal threshold and the optimal value of the objective function.
     """
@@ -58,14 +58,15 @@ def exhaustive_search_2pstates(Lambda, Alpha, pstates, time_response_min, time_r
 
 def search(Lambda, Alpha, pstates, Delta):
     """
-    It's a greedy algorithm that tries to find the best threshold for each iteration
+    It's a greedy algorithm that tries to find the best threshold for each iteration.
 
-    @param Lambda the arrival rate of the jobs
+    @param Lambda The arrival rate of the jobs.
     @param Alpha The weight of the response time in the objective function.
-    @param pstates list of power states
-    @param Delta the number of neighbors to consider
+    @param pstates List of power states.
+    @param Delta The number of neighbors to consider.
 
-    @return the optimal threshold vector, the optimal objective function value, and the time taken to run the algorithm.
+    @return The optimal threshold vector, the optimal objective function value,
+    and the time taken to run the algorithm.
     """
     n = len(pstates)
     if n < 2 or n > 6:

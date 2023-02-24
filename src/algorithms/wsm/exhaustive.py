@@ -8,19 +8,19 @@ def fill_list_with_optimal_threshold(Lambda, Alpha, pstates, time_response_min, 
                                      power_min, power_max, min_thresholds, thresholds):
     """
     It takes a list of thresholds, and recursively adds a new threshold to the list, and then calls itself with the new
-    list
+    list.
 
-    @param Lambda the arrival rate of the jobs
+    @param Lambda The arrival rate of the jobs.
     @param Alpha The weight of the response time in the objective function.
-    @param pstates list of power states
-    @param time_response_min the minimum time response for each pstate
-    @param time_response_max the maximum time response of the system
-    @param power_min the minimum power consumption of the system
-    @param power_max Maximum power consumption of the system
-    @param min_thresholds the list of thresholds that minimizes the objective function
-    @param thresholds list of thresholds
+    @param pstates List of power states.
+    @param time_response_min The minimum time response for each pstate.
+    @param time_response_max The maximum time response of the system.
+    @param power_min The minimum power consumption of the system.
+    @param power_max Maximum Power consumption of the system.
+    @param min_thresholds The list of thresholds that minimizes the objective function.
+    @param thresholds List of thresholds.
 
-    @return The thresholds and the objective function value
+    @return The thresholds and the objective function value.
     """
     m, n = len(thresholds), len(pstates)
     if m < n - 1:
@@ -43,12 +43,12 @@ def fill_list_with_optimal_threshold(Lambda, Alpha, pstates, time_response_min, 
 
 def search(Lambda, Alpha, pstates):
     """
-    It takes in the arrival rate, the service rate, and the number of pstates, and returns the optimal thresholds, the
-    optimal response time, and the time it took to run the function
+    It takes in the arrival rate, the service rate, and the number of pstates, and returns the optimal thresholds,
+    the optimal response time, and the time it took to run the function.
 
-    @param Lambda the arrival rate of the jobs
+    @param Lambda The arrival rate of the jobs.
     @param Alpha The weight of the response time in the objective function.
-    @param pstates list of pstates
+    @param pstates list of pstates.
 
     @return The thresholds, the total power, and the time it took to run the algorithm.
     """

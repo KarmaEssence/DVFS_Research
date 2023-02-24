@@ -7,14 +7,14 @@ import src.method_const as mconst
 
 def dominate(Ti, Pi, Tj, Pj):
     """
-    Return true if i dominates j
+    Return True if i dominates j.
 
-    @param Ti time of the ith solution
-    @param Pi the power consumption of the ith solution
-    @param Tj time of the jth solution
-    @param Pj the power consumption of the jth solution
+    @param Ti time of the ith solution.
+    @param Pi the power consumption of the ith solution.
+    @param Tj time of the jth solution.
+    @param Pj the power consumption of the jth solution.
 
-    @return True if Ti < Tj and Pi < Pj or Ti == Tj and Pi < Pj or Pi == Pj and Ti < Tj
+    @return True if Ti < Tj and Pi < Pj or Ti == Tj and Pi < Pj or Pi == Pj and Ti < Tj.
     """
     return True if (Ti < Tj and Pi < Pj) or (Ti == Tj and Pi < Pj) or (Pi == Pj and Ti < Tj) else False
 
@@ -24,10 +24,10 @@ def is_dominated_by_any(member, t):
     "If any space_member of the set t dominates the space_member, return True, otherwise return False."
 
     The function is_dominated_by_any is used to determine if a space_member of the population is dominated by any other
-    space_member of the population. If it is, then it is not a space_member of the Pareto front
+    space_member of the population. If it is, then it is not a space_member of the Pareto front.
 
-    @param member a tuple of (fitness, x, y)
-    @param t the current population
+    @param member A tuple of (fitness, x, y).
+    @param t The current population.
 
     @return A list of tuples. Each tuple contains the index of the space_member, the x value, and the y value.
     """
@@ -41,11 +41,11 @@ def front(Space):
     """
     It takes a list of points, sorts them by their third coordinate, then recursively splits the list in half
     and checks if the points in the second half are dominated by any of the points in the first half.
-    If they are not, they are added to the final list
+    If they are not, they are added to the final list.
 
-    @param Space the list of all the points in the space
+    @param Space The list of all the points in the space.
 
-    @return the Pareto front of the given space.
+    @return The Pareto front of the given space.
     """
     if len(Space) == 1:
         return Space
@@ -64,10 +64,10 @@ def front(Space):
 def search(Lambda, pstates):  # Method 1 : "Fast" Pareto Optimal for any Pstates
     """
     It takes a list of tuples, each tuple representing a space_member of the decision set,
-    and returns a list of tuples, each tuple representing a space_member of the Pareto optimal set
+    and returns a list of tuples, each tuple representing a space_member of the Pareto optimal set.
 
-    @param Lambda the number of tasks in the system
-    @param pstates the number of pstates to consider
+    @param Lambda The number of tasks in the system.
+    @param pstates The number of pstates to consider.
 
     @return The set of Pareto optimal solutions.
     """
@@ -88,10 +88,10 @@ def search(Lambda, pstates):  # Method 1 : "Fast" Pareto Optimal for any Pstates
 def compare_pareto_methods(Approx, Opt):
     """
     It compares two lists of solutions and returns the number of solutions that are common to both lists
-    and the percentage of common solutions
+    and the percentage of common solutions.
 
-    @param Approx The list of solutions found by the heuristic
-    @param Opt the optimal solution
+    @param Approx The list of solutions found by the heuristic.
+    @param Opt The optimal solution.
 
     @return The number of similar points and the percentage of similarity.
     """

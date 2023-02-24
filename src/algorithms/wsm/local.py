@@ -7,12 +7,12 @@ import src.method_const as mconst
 
 def add_to_list(pstates, list_element, element):
     """
-    If the length of the list is greater than or equal to the get_size_of_pareto_method of the list,
-    return the middle of the list, otherwise return the list
+    If the length of the list is greater than or equal to the constant of the list,
+    return the middle of the list, otherwise return the list.
 
-    @param pstates a list of the pstates of the system
-    @param list_element the list to add the element to
-    @param element the element to be added to the list
+    @param pstates A list of the pstates of the system.
+    @param list_element The list to add the element to.
+    @param element The element to be added to the list.
 
     @return The list_element is being returned.
     """
@@ -22,9 +22,9 @@ def add_to_list(pstates, list_element, element):
 
 def generate_random_threshold(pstates):
     """
-    It generates a random threshold vector for a given number of pstates
+    It generates a random threshold vector for a given number of pstates.
 
-    @param pstates the list of pstates
+    @param pstates The list of pstates.
 
     @return A list of random thresholds.
     """
@@ -39,14 +39,14 @@ def generate_random_threshold(pstates):
 def operation_on_threshold(threshold, operation_type, pos, number):
     """
     It takes a threshold, an operation type, a position, and a number,
-    and returns a new threshold with the number added or subtracted from the position
+    and returns a new threshold with the number added or subtracted from the position.
 
-    @param threshold the threshold array
-    @param operation_type "+" or "-"
-    @param pos the position of the threshold to be changed
-    @param number the number of operations to perform
+    @param threshold The threshold array.
+    @param operation_type "+" or "-".
+    @param pos The position of the threshold to be changed.
+    @param number The number of operations to perform.
 
-    @return the threshold after the operation is performed.
+    @return The threshold after the operation is performed.
     """
     m = len(threshold)
     res = threshold
@@ -67,17 +67,17 @@ def all_neighbour_of_threshold(Lambda, Alpha, pstates, time_response_min, time_r
                                power_min, power_max, min_threshold, number):
     """
     It takes a threshold, and returns the best threshold that is
-    one step away from the original threshold
+    one step away from the original threshold.
 
-    @param Lambda the number of tasks
+    @param Lambda The number of tasks.
     @param Alpha The weight of the power consumption in the objective function.
-    @param pstates list of pstates
-    @param time_response_min minimum time response
-    @param time_response_max the maximum time response of the system
-    @param power_min minimum power consumption
-    @param power_max Maximum power consumption of the system
-    @param min_threshold the current best threshold
-    @param number the number of thresholds to be optimized
+    @param pstates List of pstates.
+    @param time_response_min Minimum time response.
+    @param time_response_max The maximum time response of the system.
+    @param power_min Minimum power consumption.
+    @param power_max Maximum power consumption of the system.
+    @param min_threshold The current best threshold.
+    @param number The number of thresholds to be optimized.
 
     @return the best threshold found.
     """
@@ -108,12 +108,12 @@ def search(Lambda, Alpha, pstates, th_opt=None):
     It generates a random threshold, then it tries to find a better threshold by looking at all the thresholds
     that are one step away from the current threshold. If it finds a better threshold,
      it sets it as the current threshold and looks at all the thresholds that are one step away
-    from the current threshold. It repeats this process until it can't find a better threshold
+    from the current threshold. It repeats this process until it can't find a better threshold.
 
-    @param Lambda the arrival rate of the jobs
+    @param Lambda The arrival rate of the jobs.
     @param Alpha The weight of the power consumption in the objective function.
-    @param pstates list of power states
-    @param th_opt starting threshold chose by the user
+    @param pstates List of power states.
+    @param th_opt Starting threshold chose by the user.
 
     @return The threshold, the objective function value and the time taken to find the solution.
     """

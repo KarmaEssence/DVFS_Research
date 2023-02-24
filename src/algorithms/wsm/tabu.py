@@ -8,10 +8,10 @@ def compare_list(list_, global_list):
     """
     It compares a list to a list of lists, and returns True if the list is in the list of lists.
 
-    @param list_ the list to be compared.
-    @param global_list main list.
+    @param list_ The list to be compared.
+    @param global_list Main list.
 
-    @return a boolean value.
+    @return A boolean value.
     """
     if len(global_list) == 0:
         return False
@@ -30,19 +30,19 @@ def compare_list(list_, global_list):
 def all_neighbour_of_threshold(Lambda, Alpha, pstates, time_response_min, time_response_max,
                                power_min, power_max, min_threshold, number):
     """
-    It takes a threshold, and returns a list of all the thresholds that are one step away from it
+    It takes a threshold, and returns a list of all the thresholds that are one step away from it.
 
-    @param Lambda the number of states in the system
+    @param Lambda The number of states in the system.
     @param Alpha The weight of the response time in the objective function.
-    @param pstates list of all possible states
-    @param time_response_min minimum time response
-    @param time_response_max the maximum time response of the system
-    @param power_min minimum power consumption
-    @param power_max Maximum power consumption of the system
-    @param min_threshold the current best solution
-    @param number the number of thresholds to be changed
+    @param pstates List of all possible states.
+    @param time_response_min Minimum time response.
+    @param time_response_max The maximum time response of the system.
+    @param power_min minimum Power consumption.
+    @param power_max Maximum Power consumption of the system.
+    @param min_threshold The current best solution.
+    @param number The number of thresholds to be changed.
 
-    @return the minimum threshold and the list of all the thresholds that were tested.
+    @return The minimum threshold and the list of all the thresholds that were tested.
     """
     min_threshold_list = [(min_threshold[0], min_threshold[1])]
     count_before_change = 0
@@ -84,14 +84,14 @@ def all_neighbour_of_threshold(Lambda, Alpha, pstates, time_response_min, time_r
 
 def search(Lambda, Alpha, pstates, th_opt=None):
     """
-    It finds the best threshold for the given parameters
+    It finds the best threshold for the given parameters.
 
-    @param Lambda the number of tasks in the system
+    @param Lambda The number of tasks in the system.
     @param Alpha The weight of the response time in the objective function.
-    @param pstates list of tuples of the form (power, frequency)
-    @param th_opt starting threshold chose by the user
+    @param pstates List of tuples of the form (power, frequency).
+    @param th_opt Starting threshold chose by the user.
 
-    @return the threshold, the value of the objective function and the time taken to find the threshold.
+    @return The threshold, the value of the objective function and the time taken to find the threshold.
     """
     n = len(pstates)
     if n < 2 or n > 6:

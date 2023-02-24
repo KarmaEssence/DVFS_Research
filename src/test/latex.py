@@ -7,7 +7,7 @@ def latex_start_document(doc_title, doc_authors, doc_date):
     It takes in a title, author, and date, and returns a string that
     contains the LaTeX code to start a document with that information.
 
-    @param doc_title The title of the document
+    @param doc_title The title of the document.
     @param doc_authors The authors of the document.
     @param doc_date The date of the document.
 
@@ -27,10 +27,10 @@ def latex_start_document(doc_title, doc_authors, doc_date):
 def latex_pstates_array_args(Alpha_list, flag):
     """
     It takes in a list of Alpha values and a flag, and returns a string that contains the title and
-    content of the section
+    content of the section.
 
-    @param Alpha_list the list of alpha values
-    @param flag whether to use the Alpha_list or not
+    @param Alpha_list The list of alpha values.
+    @param flag Whether to use the Alpha_list or not.
 
     @return The title and content of the latex file.
     """
@@ -55,11 +55,11 @@ def latex_pstates_array_args(Alpha_list, flag):
 def write_in_document(filename, content, option):
     """
     The function `write_in_document` takes in three arguments: `filename`, `content`, and `option`. It opens the file
-    `filename` with the option `option` and writes the content `content` in the file
+    `filename` with the option `option` and writes the content `content` in the file.
 
     @param filename The name of the file you want to write to.
     @param content The content that you want to write in the file.
-    @param option 'w' for write, 'a' for append, 'r' for read
+    @param option 'w' for write, 'a' for append, 'r' for read.
     """
     with open(filename, option) as file:
         file.write(content)
@@ -124,11 +124,11 @@ def convert_pareto_data_to_latex_doc(result, filename, flag):
 
 def generate_stats_of_methods(pstates_list, Alpha_list, with_seed=True):
     """
-    It generates the statistics of the methods
+    It generates the statistics of the methods.
 
-    @param pstates_list a list of lists of pstates.
-    @param Alpha_list the list of alpha values to be tested
-    @param with_seed if True, the random threshold is generated once and used for all the methods.
+    @param pstates_list A list of lists of pstates.
+    @param Alpha_list The list of alpha values to be tested.
+    @param with_seed If True, the random threshold is generated once and used for all the methods.
     """
     res = [[0, 0, 0, 0] for _ in
            range(mconst.method_number)]  # sublist per method : [0] : stats of success, [1] : average time of success.
@@ -166,9 +166,9 @@ def generate_stats_of_methods(pstates_list, Alpha_list, with_seed=True):
 
 def generate_stats_of_pareto_methods(pstates_list, flag):
     """
-    It generates the statistics of the Kung and Approximate Kung methods
+    It generates the statistics of the Kung and Approximate Kung methods.
 
-    @param pstates_list a list of lists of pstates.
+    @param pstates_list A list of lists of pstates.
     @param flag True if you want to compare the Kung method with the Approximate method.
     False if you want to compare the approximate method with the approximate method.
 
@@ -194,10 +194,10 @@ def generate_stats_of_pareto_methods(pstates_list, flag):
 def generate_stats_2_of_methods(pstates_list, Alpha_list, with_seed=True):
     """
     It generates a list of lists, where each sublist contains the number of successes and
-    the average time of success for each method
+    the average time of success for each method.
 
-    @param pstates_list list of pstates to be tested
-    @param Alpha_list the list of alpha values to test
+    @param pstates_list List of pstates to be tested.
+    @param Alpha_list the List of alpha values to test.
     @param with_seed if True, the random threshold is generated once and used for all methods.
 
     @return A list of lists. Each sublist contains the number of times a method was successful and
@@ -242,18 +242,18 @@ def generate_stats_2_of_methods(pstates_list, Alpha_list, with_seed=True):
 def test_1():
     """
     It generates a latex document that compares the different methods
-    of the library
+    of the library.
     """
     function_name = mconst.latex_test_1
     mconst.create_folder_if_he_doesnt_exist(mconst.latex_test_1)
 
-    pstates_2D_array = [[[1, 2]]] # [[[1, 2], [1,3], [1,4],[2, 3], [2, 5], [3, 4], [3,5], [4, 5], [4, 6], [5, 6]]]
+    pstates_2D_array = [[[1, 2], [1,3], [1,4],[2, 3], [2, 5], [3, 4], [3,5], [4, 5], [4, 6], [5, 6]]]
     # pstates_2D_array = [[ [1, 2, 3], [1, 2, 6], [2, 3, 5], [3, 4, 5], [3, 5, 6], [4, 5, 6]]]
     # pstates_2D_array = [[[1, 2, 3, 4], [3, 4, 5, 6]]]
     Alpha_list = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 
     # Function calling
-    start_doc = latex_start_document("Compare methods with others", "Léo Le Corre", r"\today")
+    start_doc = latex_start_document("Compare methods with others", "You", r"\today")
     filename = mconst.example_number_has_not_been_attributed(function_name, "compare_all_method_", ".tex")
     write_in_document(filename, start_doc + latex_pstates_array_args(Alpha_list, False), 'w')
 
@@ -281,9 +281,9 @@ def test_1():
 
 def launch():
     """
-    Launch the tests
+    Launch test.
     """
-    # Parameters
+    # To generate the folder which contains the results
     mconst.create_folder_if_he_doesnt_exist(mconst.latex)
     test_1()
 

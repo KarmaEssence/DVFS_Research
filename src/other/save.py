@@ -9,7 +9,7 @@ import src.const as const
 
 def create_folder_if_he_doesnt_exist(folder_name):
     """
-    If the folder doesn't exist, create it
+    If the folder doesn't exist, create it.
 
     @param folder_name The name of the folder you want to create.
     """
@@ -19,13 +19,13 @@ def create_folder_if_he_doesnt_exist(folder_name):
 
 def example_number_has_not_been_attributed(folder, filename="example_", extension=".txt"):
     """
-    It returns the name of a file that doesn't exist in a given folder
+    It returns the name of a file that doesn't exist in a given folder.
 
-    @param folder the folder where the file will be saved
-    @param filename the name of the file you want to create
-    @param extension the extension of the file you want to create.
+    @param folder The folder where the file will be saved.
+    @param filename The name of the file you want to create.
+    @param extension The extension of the file you want to create.
 
-    @return the name of the file that has not been attributed yet.
+    @return The name of the file that has not been attributed yet.
     """
     i = 0
     if os.path.exists(folder):
@@ -38,12 +38,11 @@ def example_number_has_not_been_attributed(folder, filename="example_", extensio
 def save_multi_image(filename, limit_start, limit_end):
     """
     It takes a filename, a start index, and an end index, and saves all the figures between the start and end
-    indices to the
-    filename
+    indices to the filename.
 
-    @param filename the name of the file to save the images to
-    @param limit_start the first figure number to save
-    @param limit_end the number of the last figure you want to save
+    @param filename The name of the file to save the images to.
+    @param limit_start The first figure number to save.
+    @param limit_end The number of the last figure you want to save.
     """
     open(filename, "x")
     pp = PdfPages(filename)
@@ -55,6 +54,16 @@ def save_multi_image(filename, limit_start, limit_end):
     pp.close()
 
 def save_wsm_method_as_csv(method_name, filename, min_vector_list, time, delta=None):
+    """
+    It takes the method name, the filename, the list of minimum vectors, the time it took to run the method,
+    and the delta value (if the method is greedy) and saves the results in a csv file.
+
+    @param method_name The name of the method.
+    @param filename The name of the file to save the results.
+    @param min_vector_list List of tuples (thresholds, objective function value).
+    @param time The time it took to run the algorithm.
+    @param delta The step size for the greedy algorithm.
+    """
     raw_data = {'Name': [], 'Lambda': [], 'Alpha': [], 'pstates': [], 'Thresholds': [], 'Average Task': [],
                 'Response Time (s)': [], 'Power Consumption (w)': [], 'Reject Probability': [],
                 'Objective Function Value (0-1)': [], 'Execution Time (s)': []}
@@ -83,6 +92,13 @@ def save_wsm_method_as_csv(method_name, filename, min_vector_list, time, delta=N
     print("{} results has been saved in : {}".format(method_name, filename))
 
 def save_pareto_method_as_csv(method_name, filename, results):
+    """
+    It takes the results of a pareto method and saves it as a csv file.
+
+    @param method_name The name of the method.
+    @param filename The name of the file to save the results.
+    @param results A result to save in csv file
+    """
     raw_data = {'Name': [], 'Lambda': [], 'pstates': [], 'Thresholds': [], 'Average Task': [],
                 'Response Time (s)': [], 'Power Consumption (w)': [], 'Reject Probability': [],
                 'Execution Time (s)': []}
@@ -101,5 +117,3 @@ def save_pareto_method_as_csv(method_name, filename, results):
     df = pd.DataFrame.from_dict(raw_data)
     df.to_csv(filename, index=False)
     print("{} results has been saved in : {}".format(method_name, filename))
-
-

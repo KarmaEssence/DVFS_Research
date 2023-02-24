@@ -1,11 +1,12 @@
+# External modules
 import random
-
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from src import const
-from src import method_const as mconst
+# All method constants and constant are defined here
+import src.const as const
+import src.method_const as mconst
 
 # Dictionary of curves limits : key = pstates, value = {Alpha :(min_x, max_x, min_y, max_y), ...}
 limit_in_function_of_pstates = \
@@ -35,12 +36,12 @@ limit_in_function_of_pstates = \
 def find_point_in_solution_set(Lambda, Space, pstates, position):
     """
     It takes a list of points in the solution set, and returns a list of points in the solution set that are in the
-    specified position
+    specified position.
 
-    @param Lambda the number of states in the HMM
+    @param Lambda The rate of arrival task.
     @param Space The solution set of the problem.
     @param pstates The number of states in the Markov chain.
-    @param position "All", "Begin", "Middle", "End"
+    @param position "All", "Begin", "Middle", "End".
 
     @return A list of points that are in the solution set.
     """
@@ -68,14 +69,14 @@ def find_point_in_solution_set(Lambda, Space, pstates, position):
 
 def draw_2Dcurves(Space, Approx, Opt, results, fig_id, not_zoom):
     """
-    It takes in a list of points, and plots them on a 2D graph
+    It takes in a list of points, and plots them on a 2D graph.
 
-    @param Space the objective space
-    @param Approx The approximate Pareto front
-    @param Opt the Pareto front
-    @param results a list of tuples, list of tuple.
-    @param fig_id the figure number
-    @param not_zoom if True, the plot will be zoomed in to the region of interest.
+    @param Space The objective space.
+    @param Approx The approximate Pareto front.
+    @param Opt The Pareto front.
+    @param results A list of tuples, list of tuple.
+    @param fig_id The figure number.
+    @param not_zoom If True, the plot will be zoomed in to the region of interest.
     """
     plt.figure(fig_id)
     Space, Approx, Opt = np.array(Space, dtype=object), np.array(Approx, dtype=object), np.array(Opt, dtype=object)
@@ -104,17 +105,18 @@ def draw_2Dcurves(Space, Approx, Opt, results, fig_id, not_zoom):
     plt.legend(loc="upper right")
     print("generating curves")
 
+
 def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta, positions, separate_start):
     """
-    It generates the curves for the first plot
+    It generates the curves for the first test.
 
-    @param Lambda the number of requests per second
-    @param pstates the number of power states
-    @param greedy_Alpha_list a list of values for the weight parameter, Alpha, for the greedy search.
-    @param tabu_Alpha_list list of weights for the tabu search
-    @param Delta the distance between the points in the decision space
-    @param positions a list of positions of the starting points for the tabu search.
-    @param separate_start if True, then the starting point for each tabu search is randomly chosen from the solution
+    @param Lambda The rate of arrival task.
+    @param pstates The number of power states.
+    @param greedy_Alpha_list A list of values for the weight parameter for the greedy search.
+    @param tabu_Alpha_list List of weights for the tabu search.
+    @param Delta The size of neighborhood for the greedy search.
+    @param positions A list of positions of the starting points for the tabu search.
+    @param separate_start If True, then the starting point for each tabu search is randomly chosen from the solution
     set.
 
     @return decision_space, raw_data, results, Approx, Opt
@@ -133,7 +135,7 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
         th_h1v2s, val_h1v2s, time_h1v2s = mconst.greedy_search(Lambda, Alpha, pstates, Delta)
         time = mconst.operations_materials[val_h1v2s][5]
         power = mconst.operations_materials[val_h1v2s][6] if const.Type == 0 else \
-                mconst.operations_materials[val_h1v2s][7]
+            mconst.operations_materials[val_h1v2s][7]
 
         results[0][0].append(time)
         results[0][1].append(power)
@@ -144,7 +146,6 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
         raw_data['Power Consumption'].append("{:.10f}".format(power)),
         raw_data['Objective Function Value'].append("{:.10f}".format(val_h1v2s))
         mconst.min_vector_greedy.clear()
-
 
     # tabu search
     n = len(tabu_Alpha_list)
@@ -158,8 +159,8 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
                              "Tabu Search (w = {})".format(tabu_Alpha_list[i])]
         if separate_start:
             points = find_point_in_solution_set(Lambda, decision_space, pstates, positions[i])
-            random_threshold = points[random.randint(0, len(points) - 1)] if len(points) > 0\
-            else mconst.generate_random_threshold(pstates)
+            random_threshold = points[random.randint(0, len(points) - 1)] if len(points) > 0 \
+                else mconst.generate_random_threshold(pstates)
         th_tr, val_tr, _ = mconst.tabu_search(Lambda, tabu_Alpha_list[i], pstates, random_threshold)
         for element in mconst.min_vector_tabu:
             time = mconst.operations_materials[element[1]][5]
@@ -181,6 +182,7 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
     Approx = mconst.approx_kung_search(Lambda, pstates)[2]
     Opt = mconst.kung_search(Lambda, pstates)[2]
     return decision_space, raw_data, results, Approx, Opt
+
 
 def test_1():
     """
@@ -219,7 +221,7 @@ def test_1():
 
 def launch():
     """
-    Launch the tests
+    Launch test.
     """
     # To generate the folder which contains the results
     mconst.create_folder_if_he_doesnt_exist(mconst.curves)
