@@ -64,8 +64,8 @@ def save_wsm_method_as_csv(method_name, filename, min_vector_list, time, delta=N
     @param time The time it took to run the algorithm.
     @param delta The step size for the greedy algorithm.
     """
-    raw_data = {'Name': [], 'Lambda': [], 'Alpha': [], 'pstates': [], 'Thresholds': [], 'Average Task': [],
-                'Response Time (s)': [], 'Power Consumption (w)': [], 'Reject Probability': [],
+    raw_data = {'Name': [], 'B': [], 'C': [], 'Type': [], 'Lambda': [], 'Alpha': [], 'pstates': [], 'Thresholds': [],
+                'Average Task': [], 'Response Time (s)': [], 'Power Consumption (w)': [], 'Reject Probability': [],
                 'Objective Function Value (0-1)': [], 'Execution Time (s)': []}
 
     if method_name == "greedy":
@@ -74,6 +74,9 @@ def save_wsm_method_as_csv(method_name, filename, min_vector_list, time, delta=N
     for value in min_vector_list:
         data_tuple = mconst.operations_materials[value[1]]
         raw_data['Name'].append(method_name)
+        raw_data['B'].append(const.B)
+        raw_data['C'].append(const.C)
+        raw_data['Type'].append(const.Type)
         raw_data['Lambda'].append(data_tuple[0])
         raw_data['Alpha'].append(data_tuple[1])
         raw_data['pstates'].append(data_tuple[2])
@@ -99,12 +102,15 @@ def save_pareto_method_as_csv(method_name, filename, results):
     @param filename The name of the file to save the results.
     @param results A result to save in csv file
     """
-    raw_data = {'Name': [], 'Lambda': [], 'pstates': [], 'Thresholds': [], 'Average Task': [],
-                'Response Time (s)': [], 'Power Consumption (w)': [], 'Reject Probability': [],
+    raw_data = {'Name': [], 'B': [], 'C': [], 'Type': [], 'Lambda': [], 'pstates': [], 'Thresholds': [],
+                'Average Task': [], 'Response Time (s)': [], 'Power Consumption (w)': [], 'Reject Probability': [],
                 'Execution Time (s)': []}
 
     for value in results[2]:
         raw_data['Name'].append(method_name)
+        raw_data['B'].append(const.B)
+        raw_data['C'].append(const.C)
+        raw_data['Type'].append(const.Type)
         raw_data['Lambda'].append(results[0])
         raw_data['pstates'].append(results[1])
         raw_data['Thresholds'].append(value[0])

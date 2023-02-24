@@ -35,7 +35,8 @@ def exhaustive(Lambda, Alpha, pstates):
     method_name = "exhaustive"
     thresholds, value, time = mconst.exhaustive_search(Lambda, Alpha, pstates)
     filename = mconst.example_number_has_not_been_attributed(mconst.single_exhaustive, method_name + "_", ".csv")
-    mconst.save_method_as_csv(method_name, filename, mconst.min_vector_exhaustive, time, delta=None)
+    method_name = "Exhaustive Search"
+    mconst.save_method_as_csv(method_name , filename, mconst.min_vector_exhaustive, time, delta=None)
     displaying_results(method_name, thresholds, value, time)
     return method_name, thresholds, value, time
 
@@ -54,6 +55,7 @@ def greedy(Lambda, Alpha, pstates, Delta):
     method_name = "greedy"
     thresholds, value, time = mconst.greedy_search(Lambda, Alpha, pstates, Delta)
     filename = mconst.example_number_has_not_been_attributed(mconst.single_greedy, method_name + "_", ".csv")
+    method_name = "Greedy Search"
     mconst.save_method_as_csv(method_name, filename, mconst.min_vector_greedy, time, delta=Delta)
     displaying_results(method_name, thresholds, value, time, Delta)
     return method_name, thresholds, value, time, Delta
@@ -74,6 +76,7 @@ def local(Lambda, Alpha, pstates, th_opt=None):
     method_name = "local"
     thresholds, value, time = mconst.loca_search(Lambda, Alpha, pstates, th_opt)
     filename = mconst.example_number_has_not_been_attributed(mconst.single_local, method_name + "_", ".csv")
+    method_name = "Local Search"
     mconst.save_method_as_csv(method_name, filename, mconst.min_vector_local, time, delta=None)
     displaying_results(method_name, thresholds, value, time, th_opt=th_opt)
     return method_name, thresholds, value, time, th_opt
@@ -93,6 +96,7 @@ def tabu(Lambda, Alpha, pstates, th_opt=None):
     method_name = "tabu"
     thresholds, value, time = mconst.tabu_search(Lambda, Alpha, pstates, th_opt)
     filename = mconst.example_number_has_not_been_attributed(mconst.single_tabu, method_name + "_", ".csv")
+    method_name = "Tabu Search"
     mconst.save_method_as_csv(method_name, filename, mconst.min_vector_tabu, time, delta=None)
     displaying_results(method_name, thresholds, value, time, th_opt=th_opt)
     return method_name, thresholds, value, time, th_opt
@@ -108,6 +112,7 @@ def kung(Lambda, pstates):
     method_name = "kung"
     results = mconst.kung_search(Lambda, pstates)
     filename = mconst.example_number_has_not_been_attributed(mconst.singe_kung, method_name + "_", ".csv")
+    method_name = "Kung Search"
     mconst.save_pareto_method_as_csv(method_name, filename, results)
 
 def approx_kung(Lambda, pstates):
@@ -121,6 +126,7 @@ def approx_kung(Lambda, pstates):
     method_name = "approx_kung"
     results = mconst.approx_kung_search(Lambda, pstates)
     filename = mconst.example_number_has_not_been_attributed(mconst.single_approx_kung, method_name + "_", ".csv")
+    method_name = "Approx Kung Search"
     mconst.save_pareto_method_as_csv(method_name, filename, results)
 
 

@@ -9,12 +9,12 @@ import src.test.curves as cu
 
 def main():
     """
-    It launches all tests of the project
+    It launches all tests of the project.
     """
     mconst.create_folder_if_he_doesnt_exist(mconst.resource)
-    # cu.launch()
-    # si.launch()
-    la.launch()
+    # cu.launch() # Test 1 : Curves
+    # si.launch() # Test 2 : Single
+    # la.launch() # Test 3 : Latex
     print("All test done !")
 
 

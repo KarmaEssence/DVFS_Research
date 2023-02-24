@@ -127,7 +127,8 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
 
     decision_space = mconst.decision_space[(Lambda, str(pstates))][0]
     results = [[[], [], [], "orange", 60, "h", r'Greedy Search ($\Delta$ = 0)']]
-    raw_data = {'Function': [], 'Threshold': [], 'Alpha': [], 'Response Time': [], 'Power Consumption': [],
+    raw_data = {'Name': [], 'B': [], 'C': [], 'Type': [], 'Lambda': [], 'Pstates': [], 'Threshold': [],
+                'Alpha': [], 'Response Time': [], 'Power Consumption': [],
                 'Objective Function Value': []}
 
     # greedy search
@@ -141,8 +142,10 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
         results[0][1].append(power)
         results[0][2].append("w = {}".format(Alpha))
 
-        raw_data['Function'].append("Greedy Search"), raw_data['Threshold'].append(th_h1v2s)
-        raw_data['Alpha'].append(Alpha), raw_data['Response Time'].append("{:.10f}".format(time))
+        raw_data['Name'].append("Greedy Search"), raw_data['B'].append(const.B), raw_data['C'].append(const.C), \
+        raw_data['Type'].append(const.Type), raw_data['Lambda'].append(Lambda), raw_data['Pstates'].append(pstates)
+        raw_data['Threshold'].append(th_h1v2s), raw_data['Alpha'].append(Alpha), \
+        raw_data['Response Time'].append("{:.10f}".format(time))
         raw_data['Power Consumption'].append("{:.10f}".format(power)),
         raw_data['Objective Function Value'].append("{:.10f}".format(val_h1v2s))
         mconst.min_vector_greedy.clear()
@@ -170,8 +173,10 @@ def generate_curves_1(Lambda, pstates, greedy_Alpha_list, tabu_Alpha_list, Delta
             results_to_append[0].append(time)
             results_to_append[1].append(power)
 
-            raw_data['Function'].append("Tabu Search"), raw_data['Threshold'].append(element[0])
-            raw_data['Alpha'].append(tabu_Alpha_list[i]), raw_data['Response Time'].append("{:.10f}".format(time))
+            raw_data['Name'].append("Tabu Search"), raw_data['B'].append(const.B), raw_data['C'].append(const.C),
+            raw_data['Type'].append(const.Type), raw_data['Lambda'].append(Lambda), raw_data['Pstates'].append(pstates)
+            raw_data['Threshold'].append(element[0]), raw_data['Alpha'].append(tabu_Alpha_list[i]), \
+            raw_data['Response Time'].append("{:.10f}".format(time))
             raw_data['Power Consumption'].append("{:.10f}".format(power)),
             raw_data['Objective Function Value'].append("{:.10f}".format(element[1]))
 
