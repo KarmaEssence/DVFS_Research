@@ -18,11 +18,44 @@ Uncomment and run function from launcher.py :
 
     python launcher.py
 
+## Architecture
+
+Tree of the most important files and folder in the project's repository hierarchy :
+
+```
+/
+├─┬─resources/: To store all generated results.
+│ ├──curves/: To store all curves.
+│ ├──latex/: To store all latex content.
+│ └──single/: To store all single results.
+├───screenshots/: All screenshots used in README.md.
+├─┬─src/: Source folder.
+│ ├─┬─algorithms/: Algorithms folder.
+│ │ ├─┬─wsm/: Weighted sum methods.
+│ │ │ ├──exhaustive.py: Exhaustive search.
+│ │ │ ├──greedy.py: Greedy proposed method.
+│ │ │ ├──local.py: Local search.
+│ │ │ └──tabu.py: Tabu search. 
+│ │ └─┬─pareto/: Pareto methods.
+│ │   ├──kung.py: Kung front method.
+│ │   └──approx_kung.py: Approx greedy Pareto method.
+│ ├─┬─others/: Other methods.
+│ │ ├──save_data_in_file.py: To save results in resources file.
+│ │ └──utils.py: Utils functions.
+│ └─┬─tests/: Tests folder.
+│   ├──curves.py: To generates curves.
+│   ├──latex.py: To generates latex content.
+│   └──single.py: Test of each componant of projet.
+├───.gitignore: To avoid junk files on git repository. 
+├───README.md: This file.
+└───launcher.py: To run all content from src/.
+```
+
 ## Usage
 
-In this project, you are three type of tests you can run :
+In this project, there are three types of tests you can run :
 
-### Curves
+### Test1: Curves
 
 Allows to generate a graph to compare the efficiency of all weight sum and pareto methods.
 To use this test, you need to uncomment the function `cu.launch()` in `launcher.py`, after that, you can go to `curves.py`
@@ -53,7 +86,7 @@ For example, here is the result of the test 1 :
 </div>
 <br>
 
-### Single
+### Test2: Single
 
 Allows to shows all algorithms already implemented in action.
 To use this test, you need to uncomment the function `si.launch()` in `launcher.py`, after that, you can go to `single.py` 
@@ -76,7 +109,7 @@ For example, here is the result of the exhaustive search :
 </div>
 <br>
 
-### Latex
+### Test3: Latex
 
 Allows to generate a latex file to compare the efficiency of all wsm and pareto method.
 To use this test, you need to uncomment the function `la.launch()` in `launcher.py`, after that, you can go to `latex.py`
@@ -127,38 +160,6 @@ In this section all screenshots related to the test are displayed here.
 
 </div>
 
-## Architecture
-
-Tree of the most important files and folder in the project's repository hierarchy :
-
-```
-/
-├─┬─resources/: To store all generated results.
-│ ├──curves/: To store all curves.
-│ ├──latex/: To store all latex content.
-│ └──single/: To store all single results.
-├───screenshots/: All screenshots used in README.md.
-├─┬─src/: Source folder.
-│ ├─┬─algorithms/: Algorithms folder.
-│ │ ├─┬─wsm/: Weighted sum methods.
-│ │ │ ├──exhaustive.py: Exhaustive search.
-│ │ │ ├──greedy.py: Greedy proposed method.
-│ │ │ ├──local.py: Local search.
-│ │ │ └──tabu.py: Tabu search. 
-│ │ └─┬─pareto/: Pareto methods.
-│ │   ├──kung.py: Kung front method.
-│ │   └──approx_kung.py: Approx greedy Pareto method.
-│ ├─┬─others/: Other methods.
-│ │ ├──save_data_in_file.py: To save results in resources file.
-│ │ └──utils.py: Utils functions.
-│ └─┬─tests/: Tests folder.
-│   ├──curves.py: To generates curves.
-│   ├──latex.py: To generates latex content.
-│   └──single.py: Test of each componant of projet.
-├───.gitignore: To avoid junk files on git repository. 
-├───README.md: This file.
-└───launcher.py: To run all content from src/.
-```
 
 ##  Contributors
 
