@@ -1,10 +1,10 @@
 # DVFS-Research
 
-## Goal
+## I - Goal
  
 This framework addresses the problem of performance-energy trade-off in DVFS (Dynamic Voltage Frequency Scaling) systems. Today processor, Virtual Machine and Servers activity bring environmental question, more accurately some services doesn't need a high capacity of ressources. DVFS technique allows a system to remain switched ON while changing frequency to match the traffic. This avoids successive shutdown and restoration costs of big systems that can result in waste additional power and further latency to restore the same regime. The proposed DVFS model consideres a vector of thresholds that controls switch UP or DOWN of the frequency of the system. Thus, we seek to find the optimal vector of thresholds for performance and power consumption control. The system is modeled by a birth-death process that we propose, solved analytically and efficiently. Then we start a Multi-Objective Optimization to find the optimal thresholds. The optimization process considers a scalarization approach (WSM - Weighted Sum Method) and a non-dominated set approach (Pareto method). For more details, refer to the original paper [1].
 
-## Project architecture
+## II - Project architecture
 
 Tree of the most important files and folder in the project's repository :
 
@@ -37,7 +37,7 @@ Tree of the most important files and folder in the project's repository :
 └───launcher.py: To run all content from src/.
 ```
 
-## Build and run
+## III - Build and run
 
 Before running code, you need to download all package needed :
 
@@ -49,7 +49,7 @@ Uncomment and run function from launcher.py :
 
     python launcher.py
 
-## Usage
+## IV - Usage
 
 In this project, there are three type of tests you can run :
 
@@ -141,7 +141,7 @@ your latex editor like overleaf :
 </div>
 <br>
 
-## Illustration
+## V - Illustration
 
 In this section all screenshots related to the test are displayed here.
 
@@ -166,13 +166,11 @@ In this section all screenshots related to the test are displayed here.
 
 
 
-##  Contributors
+##  Contributors & Copyright
 
 - [Leo LE CORRE](https://github.com/KarmaEssence)
 - [Youssef AIT EL MAHJOUB](https://github.com/ossef)
 
-## Copyright
-
-This code is open source. However, one can cite the original document [1] submitted to ECMS 2023.
+- This code is open source. However, one can cite the original document [1] submitted to ECMS 2023.
 
 [1] "STOCHASTIC MODELING AND OPTIMIZATION FOR POWER AND PERFORMANCE CONTROL IN DVFS SYSTEMS", Youssef AIT EL MAHJOUB, Leo LE CORRE and Hind CASTEL-TALEB". The paper was submitted to "MaSpec" track of 37th ECMS - International Conference on Modelling and Simulation, 2023.
