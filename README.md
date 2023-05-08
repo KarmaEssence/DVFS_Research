@@ -81,7 +81,7 @@ For example, here is the result of the test 1 :
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_test_1_results.png" width="500" height="200"/>
+    <img src="./screenshots/curves_test_1_results.png" width="500" height="200"/>
 </div>
 <br>
 
@@ -94,7 +94,7 @@ your own test in this file.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/single_uncomment_in_launcher.png" width="400" height="150"/>
+    <img src="./screenshots/single_uncomment_in_launcher.png" width="400" height="150"/>
 </div>
 <br>
 
@@ -103,11 +103,11 @@ For example, here is the result of the exhaustive search :
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/single_exhaustive_results_1.png" width="500" height="125"/>
+    <img src="./screenshots/single_exhaustive_results_1.png" width="500" height="125"/>
 </div>
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/single_exhaustive_results_2.png" width="500" height="25"/>
+    <img src="./screenshots/single_exhaustive_results_2.png" width="500" height="25"/>
 </div>
 <br>
 
@@ -120,7 +120,7 @@ your own test in this file.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_uncomment_in_launcher.png" width="400" height="150"/>
+    <img src="./screenshots/latex_uncomment_in_launcher.png" width="400" height="150"/>
 </div>
 <br>
 
@@ -134,11 +134,11 @@ your latex editor like overleaf :
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_test_1_results_1.png" width="500" height="20"/>
+    <img src="./screenshots/latex_test_1_results_1.png" width="500" height="20"/>
 </div>
 <br>
 <div align="center">
-        <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_test_1_results_2.png" width="1000" height="350"/>
+        <img src="./screenshots/latex_test_1_results_2.png" width="1000" height="350"/>
 </div>
 <br>
 
@@ -151,19 +151,19 @@ In this section all screenshots related to the test are displayed here.
 ### A) Curves 
 
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_1.png" width="300" height="250"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_2.png" width="300" height="250"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_3.png" width="300" height="250"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_example_4.png" width="300" height="250"/>
+    <img src="./screenshots/curves_example_1.png" width="300" height="250"/>
+    <img src="./screenshots/curves_example_2.png" width="300" height="250"/>
+    <img src="./screenshots/curves_example_3.png" width="300" height="250"/>
+    <img src="./screenshots/curves_example_4.png" width="300" height="250"/>
 </div>    
 
 ### B) Latex (example of a small instance)
 
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_1.png" width="600" height="140"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_2.png" width="600" height="70"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_3.png" width="600" height="120"/>
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/latex_example_4.png" width="600" height="50"/>
+    <img src="./screenshots/latex_example_1.png" width="600" height="140"/>
+    <img src="./screenshots/latex_example_2.png" width="600" height="70"/>
+    <img src="./screenshots/latex_example_3.png" width="600" height="120"/>
+    <img src="./screenshots/latex_example_4.png" width="600" height="50"/>
 
 </div>
 
