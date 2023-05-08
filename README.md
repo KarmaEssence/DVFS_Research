@@ -71,9 +71,10 @@ curves with the same scale and the position where the points should be selected.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_uncomment_in_test_1.png" width="400" height="250"/>
+    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_uncomment_in_test_1.png" width="400" height="250"/>
 </div>
 <br>
+
 
 Once your tests are finished, you can check in `resources/curves/<test>/` to see the generated graphs and their data (respectively in pdf and csv files).
 For example, here is the result of the test 1 :
