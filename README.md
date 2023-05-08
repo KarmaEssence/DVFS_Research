@@ -61,7 +61,7 @@ to uncomment the actual function to use, moreover you can add or remove your own
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Internship/blob/5-final-branch/screenshots/curves_uncomment_in_launcher.png" width="400" height="150"/>
+    <img src="./screenshots/curves_uncomment_in_launcher.png" width="400" height="150"/>
 </div>
 <br>
 
@@ -71,7 +71,7 @@ curves with the same scale and the position where the points should be selected.
 
 <br>
 <div align="center">
-    <img src="https://github.com/KarmaEssence/DVFS_Research/blob/main/screenshots/curves_uncomment_in_test_1.png" width="400" height="250"/>
+    <img src="./screenshots/curves_uncomment_in_test_1.png" width="400" height="250"/>
 </div>
 <br>
 
